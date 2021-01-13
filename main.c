@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: seolim <seolim@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/01/13 14:08:14 by seolim            #+#    #+#             */
+/*   Updated: 2021/01/13 14:08:35 by seolim           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "minishell.h"
 
-static void arr_init(char str[255])
+static void	arr_init(char str[255])
 {
 	int	i;
 
@@ -9,7 +21,7 @@ static void arr_init(char str[255])
 		str[i] = 0;
 }
 
-int global_init()
+int			global_init(void)
 {
 	g_last_ret = 0;
 	g_pipe_cmd = NULL;
@@ -20,7 +32,7 @@ int global_init()
 	g_argv_p = NULL;
 }
 
-int shell(char **input)
+int			shell(char **input)
 {
 	int		start;
 	int		i;
@@ -45,7 +57,7 @@ int shell(char **input)
 	}
 }
 
-int main(int argc, char *argv[], char *envp[])
+int			main(int argc, char *argv[], char *envp[])
 {
 	char	str[255];
 	int		i;
