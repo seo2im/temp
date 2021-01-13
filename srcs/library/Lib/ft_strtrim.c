@@ -6,13 +6,13 @@
 /*   By: seolim <seolim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/13 13:23:52 by seolim            #+#    #+#             */
-/*   Updated: 2021/01/13 13:32:57 by seolim           ###   ########.fr       */
+/*   Updated: 2021/01/13 13:35:05 by seolim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lib.h"
 
-static int  check_word_in(char c, char const *set)
+static int	check_word_in(char c, char const *set)
 {
 	int i;
 
@@ -23,16 +23,16 @@ static int  check_word_in(char c, char const *set)
 			return (1);
 		i++;
 	}
-	return  (0);
+	return (0);
 }
 
 static char *ft_strdup_start_end(char const *src, int start, int end)
 {
 	char	*dest;
-	int  i;
+	int		i;
 
 	i = -1;
-	if((dest = malloc(sizeof(char) * (end - start + 1))) == 0)
+	if ((dest = malloc(sizeof(char) * (end - start + 1))) == 0)
 		return (0);
 	if (start == (end + 1))
 		return (0);
