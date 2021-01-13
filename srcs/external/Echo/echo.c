@@ -6,7 +6,7 @@
 /*   By: seolim <seolim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/13 13:48:37 by seolim            #+#    #+#             */
-/*   Updated: 2021/01/13 13:49:00 by seolim           ###   ########.fr       */
+/*   Updated: 2021/01/13 13:50:23 by seolim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	echo(int argc, char *argv[], char *envp[])
 	}
 	if (option)
 		ft_write(1, argv[i + option]);
-	else 
+	else
 		ft_write_n(1, argv[i + option]);
 	g_last_ret = 0;
 	return 0;
