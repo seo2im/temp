@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   redi_utils.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: seolim <seolim@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/01/13 13:57:43 by seolim            #+#    #+#             */
+/*   Updated: 2021/01/13 13:58:10 by seolim           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "minishell.h"
 
 void	std_backup(int fd[2], int backup[2])
@@ -35,7 +47,7 @@ int		is_cmd(char *cmd)
 		return (TRUE);
 	else
 	{
-		g_last_ret = 3; //(normally 127)
+		g_last_ret = 3;
 		ft_write(2, cmd);
 		ft_write_n(2, " : command not found");
 		return (FALSE);

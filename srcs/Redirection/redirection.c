@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   redirection.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: seolim <seolim@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/01/13 13:58:16 by seolim            #+#    #+#             */
+/*   Updated: 2021/01/13 13:58:31 by seolim           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "minishell.h"
 
 static void	rediretioning(char *file, char *flag, int fd[2])
@@ -28,7 +40,7 @@ static char	**error(char **argv, char *cmd)
 	return (NULL);
 }
 
-char	**redirection(char **cmd, int fd[2])
+char		**redirection(char **cmd, int fd[2])
 {
 	char	**argv;
 	int		i;
