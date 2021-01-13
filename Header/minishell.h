@@ -6,21 +6,21 @@
 /*   By: seolim <seolim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/13 14:13:38 by seolim            #+#    #+#             */
-/*   Updated: 2021/01/13 14:13:50 by seolim           ###   ########.fr       */
+/*   Updated: 2021/01/13 14:15:42 by seolim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MINISHELL_H
 # define MINISHELL_H
-#include "macro.h"
-#include "lib.h"
-#include "parser.h"
-#include "env.h"
-#include <sys/wait.h>
-#include <sys/stat.h>
-#include <errno.h>
-#include <string.h>
-#include <signal.h>
+# include "macro.h"
+# include "lib.h"
+# include "parser.h"
+# include "env.h"
+# include <sys/wait.h>
+# include <sys/stat.h>
+# include <errno.h>
+# include <string.h>
+# include <signal.h>
 
 int			g_last_ret;
 char		**g_envp;
