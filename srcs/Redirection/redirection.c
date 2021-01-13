@@ -6,7 +6,7 @@
 /*   By: seolim <seolim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/13 13:58:16 by seolim            #+#    #+#             */
-/*   Updated: 2021/01/13 13:58:31 by seolim           ###   ########.fr       */
+/*   Updated: 2021/01/13 13:59:35 by seolim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ char		**redirection(char **cmd, int fd[2])
 	char	**argv;
 	int		i;
 	int		j;
-	
+
 	argv = NULL;
 	if (!(argv = double_alloc(ft_strslen(cmd))))
 		return (NULL);

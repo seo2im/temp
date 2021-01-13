@@ -6,7 +6,7 @@
 /*   By: seolim <seolim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/13 13:57:43 by seolim            #+#    #+#             */
-/*   Updated: 2021/01/13 13:58:10 by seolim           ###   ########.fr       */
+/*   Updated: 2021/01/13 13:59:24 by seolim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	std_backup(int fd[2], int backup[2])
 		close(fd[0]);
 	}
 	if (fd[1] != 1)
-	{		
+	{	
 		dup2(1, backup[1]);
 		dup2(fd[1], 1);
 		close(fd[1]);
@@ -42,7 +42,7 @@ int		is_cmd(char *cmd)
 {
 	if (!strcmp(cmd, "echo") || !strcmp(cmd, "cd")
 		|| !strcmp(cmd, "pwd") || !strcmp(cmd, "export")
-		|| !strcmp(cmd, "unset")|| !strcmp(cmd, "env")
+		|| !strcmp(cmd, "unset") || !strcmp(cmd, "env")
 		|| !strcmp(cmd, "exit"))
 		return (TRUE);
 	else
