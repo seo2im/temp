@@ -6,7 +6,7 @@
 /*   By: seolim <seolim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/13 13:23:52 by seolim            #+#    #+#             */
-/*   Updated: 2021/01/13 13:35:05 by seolim           ###   ########.fr       */
+/*   Updated: 2021/01/13 13:36:09 by seolim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static int	check_word_in(char c, char const *set)
 	return (0);
 }
 
-static char *ft_strdup_start_end(char const *src, int start, int end)
+static char	*ft_strdup_start_end(char const *src, int start, int end)
 {
 	char	*dest;
 	int		i;
