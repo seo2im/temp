@@ -6,7 +6,7 @@
 /*   By: seolim <seolim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/13 13:37:55 by seolim            #+#    #+#             */
-/*   Updated: 2021/01/13 13:40:12 by seolim           ###   ########.fr       */
+/*   Updated: 2021/01/13 13:44:55 by seolim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char		**init_envp(char *old_envp[])
 
 	len = ft_strslen(old_envp);
 	if (!(envp = double_alloc(len)))
-		return (NULL);	
+		return (NULL);
 	i = -1;
 	while (++i < len)
 	{
@@ -59,7 +59,7 @@ int			set_env(char *envp[], char *env_string)
 
 	key_value = key_value_parse(env_string);
 	while (*envp)
-	{		
+	{	
 		i = -1;
 		while (++i < ft_strlen(*envp))
 		{
@@ -68,8 +68,8 @@ int			set_env(char *envp[], char *env_string)
 				if (!ft_strncmp(*envp, key_value[0], i - 1))
 				{
 					free(*envp);
-					if(!(*envp = ft_strdup(env_string)))
-						return (FALSE); 
+					if (!(*envp = ft_strdup(env_string)))
+						return (FALSE);
 					ft_double_free(key_value);
 					return (TRUE);
 				}
@@ -108,12 +108,11 @@ int			delete_env(char ***envp, char *key)
 	int		j;
 	int		len;
 
-	len = ft_strslen(*envp);
-	if (!(new_envp = double_alloc(len)))
+	if (!(new_envp = double_alloc(ft_strslen(*envp))))
 		return (FALSE);
 	i = -1;
 	j = -1;
-	while (++i < len)
+	while (++i < ft_strslen(*envp))
 	{
 		key_value = key_value_parse((*envp)[i]);
 		if (!ft_strcmp(key_value[0], key))

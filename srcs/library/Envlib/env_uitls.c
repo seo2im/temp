@@ -6,7 +6,7 @@
 /*   By: seolim <seolim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/13 13:38:44 by seolim            #+#    #+#             */
-/*   Updated: 2021/01/13 13:38:48 by seolim           ###   ########.fr       */
+/*   Updated: 2021/01/13 13:41:13 by seolim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,10 @@ char		**key_value_parse(char *env_string)
 		if ((env_string)[i] == '=')
 		{
 			if (!(key_value[0] = ft_strndup(env_string, i)))
-				return(NULL); // errorno process;
+				return (NULL);
 			if (!(key_value[1] = ft_strdup(env_string + i + 1)))
-				return(NULL); // errorno process;
-			break;
+				return (NULL);
+			break ;
 		}
 	}
 	key_value[2] = NULL;
