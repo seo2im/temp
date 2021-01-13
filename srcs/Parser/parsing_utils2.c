@@ -6,7 +6,7 @@
 /*   By: seolim <seolim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/13 13:53:22 by seolim            #+#    #+#             */
-/*   Updated: 2021/01/13 13:53:29 by seolim           ###   ########.fr       */
+/*   Updated: 2021/01/13 13:57:11 by seolim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,6 @@ char	**cutting(char *str, int *cut, int len)
 	char	*temp;
 	int		i;
 	int		j;
-
 
 	if (!(strs = double_alloc(len)))
 		return (NULL);

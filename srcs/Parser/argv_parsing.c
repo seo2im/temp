@@ -6,7 +6,7 @@
 /*   By: seolim <seolim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/13 13:51:51 by seolim            #+#    #+#             */
-/*   Updated: 2021/01/13 13:52:18 by seolim           ###   ########.fr       */
+/*   Updated: 2021/01/13 13:55:47 by seolim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static char	*get_key(char *arg, int *idx)
 		if (ft_strchr("<>|;\"\'\\ ", arg[i]))
 		{
 			key = ft_strndup(arg + *idx, i - *idx);
-			*idx =  i - 1;
+			*idx = i - 1;
 			return (key);
 		}
 		i++;
@@ -65,7 +65,7 @@ char		*argv_parsing(char *arg)
 
 	i = -1;
 	j = -1;
-	new = malloc(1000); // TODO : have to change
+	new = malloc(1000);
 	while (arg[++i])
 	{
 		if (is_out(arg, i))

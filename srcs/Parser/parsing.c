@@ -6,7 +6,7 @@
 /*   By: seolim <seolim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/13 13:52:24 by seolim            #+#    #+#             */
-/*   Updated: 2021/01/13 13:54:48 by seolim           ###   ########.fr       */
+/*   Updated: 2021/01/13 13:56:54 by seolim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,11 @@ char	**sep_space(char *line)
 			cut[++j] = i;
 	}
 	cut[++j] = i;
-	return cutting(line, cut, j);
+	return (cutting(line, cut, j));
 }
 
 int		is_token_check(char **token)
-{	
+{
 	if (!ft_strcmp(*(token + 1), "|") || !ft_strcmp(*(token + 1), ";"))
 	{
 		ft_write(2, "syntax error near unexpected token ");
@@ -55,7 +55,7 @@ int		input_check(char **input)
 	}
 	while (*input)
 	{
-		if ((!ft_strcmp(*input, ">") || !ft_strcmp(*input, "<") 
+		if ((!ft_strcmp(*input, ">") || !ft_strcmp(*input, "<")
 		|| !ft_strcmp(*input, ">>")) && !*(input + 1))
 		{
 			ft_write_n(2, "syntax error near unexpected token \'newline\'");
@@ -70,7 +70,7 @@ int		input_check(char **input)
 	return (TRUE);
 }
 
-int pre_parsing(char *line, char ***input)
+int		pre_parsing(char *line, char ***input)
 {
 	if (!valid_quote(line))
 		return (FALSE);
