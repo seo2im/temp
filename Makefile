@@ -8,15 +8,15 @@ SRC = ./main.c	\
 		./srcs/Shell/multi/*.c \
 		./srcs/external/Echo/echo.c \
 		./srcs/external/Env/env.c \
-		./srcs/external/Pwd/pwd.c
+		./srcs/external/Pwd/pwd.c \
+		./srcs/library/Envlib/*.c \
+		./srcs/library/Lib/*.c
 FLAG = -Wall -Werror -Wextra
-LIB = -L./srcs/library/Envlib -lenv \
-		-L./srcs/library/Lib -lft
 
 all : $(TARGET)
 
 $(TARGET) : $(SRC)
-	gcc -o $(TARGET) $(SRC) $(HEADER) $(LIB)
+	gcc -o $(TARGET) $(SRC) $(HEADER)
 
 fclean :
 	rm -rf $(TARGET)
