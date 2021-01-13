@@ -6,7 +6,7 @@
 /*   By: seolim <seolim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/13 13:48:37 by seolim            #+#    #+#             */
-/*   Updated: 2021/01/13 13:51:19 by seolim           ###   ########.fr       */
+/*   Updated: 2021/01/13 17:06:13 by seolim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ int	echo(int argc, char *argv[], char *envp[])
 	int	option;
 	int	i;
 
+	envp++;
 	option = FALSE;
 	if (!ft_strcmp(argv[1], "-n"))
 		option = TRUE;

@@ -6,7 +6,7 @@
 /*   By: seolim <seolim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/13 13:49:04 by seolim            #+#    #+#             */
-/*   Updated: 2021/01/13 14:55:36 by seolim           ###   ########.fr       */
+/*   Updated: 2021/01/13 17:01:59 by seolim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ int		env(int argc, char *argv[], char *envp[])
 	char	**env;
 	int		i;
 
+	argc++;
 	env = init_envp(envp);
 	i = 0;
 	while (argv[++i])

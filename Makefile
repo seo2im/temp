@@ -36,7 +36,7 @@ SRC = 	./srcs/library/Lib/ft_alloc.c \
 		./srcs/Parser/parsing_utils2.c \
 		\
 		./srcs/Shell/multi/multi.c \
-		./srcs/Shell/multi/multi_utils*.c \
+		./srcs/Shell/multi/multi_utils.c \
 		./srcs/Shell/multi/work.c \
 		./srcs/Shell/exit.c \
 		./srcs/Shell/piping.c \

@@ -6,7 +6,7 @@
 /*   By: seolim <seolim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/13 14:08:14 by seolim            #+#    #+#             */
-/*   Updated: 2021/01/13 16:19:13 by seolim           ###   ########.fr       */
+/*   Updated: 2021/01/13 17:04:11 by seolim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,8 @@ int			main(int argc, char *argv[], char *envp[])
 {
 	char	*line;
 
+	argc++;
+	argv++;
 	sig_int();
 	global_init();
 	g_envp = init_envp(envp);
