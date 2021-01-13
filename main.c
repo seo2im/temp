@@ -6,7 +6,7 @@
 /*   By: seolim <seolim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/13 14:08:14 by seolim            #+#    #+#             */
-/*   Updated: 2021/01/13 14:08:35 by seolim           ###   ########.fr       */
+/*   Updated: 2021/01/13 14:11:33 by seolim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ int			main(int argc, char *argv[], char *envp[])
 	global_init();
 	g_envp = init_envp(envp);
 	while (TRUE)
-	{	
+	{
 		prompt(str);
 		if (!pre_parsing(str, &g_input))
 			continue;
