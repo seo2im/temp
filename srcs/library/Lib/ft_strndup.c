@@ -6,7 +6,7 @@
 /*   By: seolim <seolim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/13 13:25:31 by seolim            #+#    #+#             */
-/*   Updated: 2021/01/13 13:25:42 by seolim           ###   ########.fr       */
+/*   Updated: 2021/01/13 13:33:35 by seolim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char	*ft_stredup(char *src, int start, int end)
 	int		i;
 	int		j;
 
-	if (!(dest = malloc(sizeof(char) * (end - start  + 1))))
+	if (!(dest = malloc(sizeof(char) * (end - start + 1))))
 		return (NULL);
 	i = start - 1;
 	j = -1;

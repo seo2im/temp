@@ -6,7 +6,7 @@
 /*   By: seolim <seolim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/13 13:25:14 by seolim            #+#    #+#             */
-/*   Updated: 2021/01/13 13:25:16 by seolim           ###   ########.fr       */
+/*   Updated: 2021/01/13 13:31:24 by seolim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strjoin(char **strs, char c)
 	int		strs_len;
 	int		i;
 	int		j;
-	
+
 	strs_len = ft_strslen(strs);
 	total_len = 0;
 	i = -1;

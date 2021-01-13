@@ -6,7 +6,7 @@
 /*   By: seolim <seolim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/13 13:24:15 by seolim            #+#    #+#             */
-/*   Updated: 2021/01/13 13:24:31 by seolim           ###   ########.fr       */
+/*   Updated: 2021/01/13 13:31:46 by seolim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ static int	word_len(char const *str, char c)
 static void	ft_strncpy(char *dest, char const *str, int n)
 {
 	int i;
-	
+
 	i = -1;
 	while (++i < n)
 		*(dest + i) = *(str + i);
