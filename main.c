@@ -6,7 +6,7 @@
 /*   By: seolim <seolim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/13 14:08:14 by seolim            #+#    #+#             */
-/*   Updated: 2021/01/13 14:11:33 by seolim           ###   ########.fr       */
+/*   Updated: 2021/01/13 14:45:21 by seolim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static void	arr_init(char str[255])
 		str[i] = 0;
 }
 
-int			global_init(void)
+void		global_init(void)
 {
 	g_last_ret = 0;
 	g_pipe_cmd = NULL;
@@ -32,7 +32,7 @@ int			global_init(void)
 	g_argv_p = NULL;
 }
 
-int			shell(char **input)
+void		shell(char **input)
 {
 	int		start;
 	int		i;

@@ -6,13 +6,13 @@
 /*   By: seolim <seolim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/13 14:01:33 by seolim            #+#    #+#             */
-/*   Updated: 2021/01/13 14:01:58 by seolim           ###   ########.fr       */
+/*   Updated: 2021/01/13 14:53:01 by seolim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 
-static int	work3(char **argv_p)
+static void	work3(char **argv_p)
 {
 	if (!ft_strcmp(argv_p[0], "echo"))
 		echo(ft_strslen(argv_p), argv_p, g_envp);

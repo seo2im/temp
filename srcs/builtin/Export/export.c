@@ -6,7 +6,7 @@
 /*   By: seolim <seolim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/13 13:46:57 by seolim            #+#    #+#             */
-/*   Updated: 2021/01/13 13:47:26 by seolim           ###   ########.fr       */
+/*   Updated: 2021/01/13 14:47:13 by seolim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,4 +36,5 @@ int			export(char *argv[])
 			add_env(&g_envp, argv[i]);
 	}
 	g_last_ret = 0;
+	return (0);
 }

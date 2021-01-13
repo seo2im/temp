@@ -6,7 +6,7 @@
 /*   By: seolim <seolim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/13 13:51:51 by seolim            #+#    #+#             */
-/*   Updated: 2021/01/13 13:55:47 by seolim           ###   ########.fr       */
+/*   Updated: 2021/01/13 14:48:13 by seolim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static char	*get_key(char *arg, int *idx)
 	return (key);
 }
 
-static char	enving(char *arg, char *new, int *idx, int *jdx)
+static void	enving(char *arg, char *new, int *idx, int *jdx)
 {
 	char	*key;
 	char	*env;
