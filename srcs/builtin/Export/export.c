@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   export.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: seolim <seolim@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/01/13 13:46:57 by seolim            #+#    #+#             */
+/*   Updated: 2021/01/13 13:47:26 by seolim           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "minishell.h"
 
-static int valid_arg(char *env_string)
+static int	valid_arg(char *env_string)
 {
 	int	i;
 
@@ -11,7 +23,7 @@ static int valid_arg(char *env_string)
 	return (FALSE);
 }
 
-int export(char *argv[])
+int			export(char *argv[])
 {
 	int		i;
 
