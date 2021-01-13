@@ -1,11 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   minishell.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: seolim <seolim@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/01/13 14:13:38 by seolim            #+#    #+#             */
+/*   Updated: 2021/01/13 14:13:50 by seolim           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef MINISHELL_H
 # define MINISHELL_H
-
 #include "macro.h"
 #include "lib.h"
 #include "parser.h"
 #include "env.h"
-
 #include <sys/wait.h>
 #include <sys/stat.h>
 #include <errno.h>
@@ -24,7 +34,6 @@ int			prompt(char *str);
 char		**redirection(char **cmd, int fd[2]);
 int			piping(char **command);
 void		sig_int();
-
 
 int			cd(char *dir);
 int			export(char *argv[]);
