@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   piping.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: seolim <seolim@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/01/13 14:04:10 by seolim            #+#    #+#             */
+/*   Updated: 2021/01/13 14:04:14 by seolim           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "minishell.h"
 
-int is_piping(char **cmd)
+int	is_piping(char **cmd)
 {
 	int i;
 
@@ -11,7 +23,7 @@ int is_piping(char **cmd)
 	return (FALSE);
 }
 
-int piping(char **cmd)
+int	piping(char **cmd)
 {
 	int		i;
 	
