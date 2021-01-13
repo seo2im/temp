@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   parsing.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: seolim <seolim@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/01/13 13:52:24 by seolim            #+#    #+#             */
+/*   Updated: 2021/01/13 13:52:51 by seolim           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "minishell.h"
 
-char **sep_space(char *line)
+char	**sep_space(char *line)
 {
 	int	i;
 	int	j;
@@ -19,7 +31,7 @@ char **sep_space(char *line)
 	return cutting(line, cut, j);
 }
 
-int is_token_check(char **token)
+int		is_token_check(char **token)
 {	
 	if (!ft_strcmp(*(token + 1), "|") || !ft_strcmp(*(token + 1), ";"))
 	{
@@ -31,9 +43,9 @@ int is_token_check(char **token)
 	return (TRUE);
 }
 /*
-	Have to fix it  > < 관련
+*	Have to fix it  > < 관련
 */
-int input_check(char **input)
+int		input_check(char **input)
 {
 	if ((!ft_strcmp(*input, ";") || !ft_strcmp(*input, "|"))
 		&& ft_strslen(input) == 1)
