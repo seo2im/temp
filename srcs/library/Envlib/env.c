@@ -6,7 +6,7 @@
 /*   By: seolim <seolim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/13 13:37:55 by seolim            #+#    #+#             */
-/*   Updated: 2021/01/13 13:44:55 by seolim           ###   ########.fr       */
+/*   Updated: 2021/01/13 13:45:39 by seolim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ int			set_env(char *envp[], char *env_string)
 
 	key_value = key_value_parse(env_string);
 	while (*envp)
-	{	
+	{
 		i = -1;
 		while (++i < ft_strlen(*envp))
 		{
