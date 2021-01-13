@@ -6,7 +6,7 @@
 /*   By: seolim <seolim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/13 14:13:38 by seolim            #+#    #+#             */
-/*   Updated: 2021/01/13 14:15:42 by seolim           ###   ########.fr       */
+/*   Updated: 2021/01/13 14:16:36 by seolim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,12 +41,12 @@ int			echo(int argc, char *argv[], char *envp[]);
 int			unset(char **argv);
 int			env(int argc, char *argv[], char *envp[]);
 int			pwd(int argc, char *argv[], char *envp[]);
-int 		ft_exit();
+int			ft_exit(void);
 
 int			is_cmd(char *cmd);
 
 int			single(char **argv);
-int 		multi(char **command);
+int			multi(char **command);
 void		std_backup(int fd[2], int backup[2]);
 void		std_reset(int fd[2], int backup[2]);
 
