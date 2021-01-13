@@ -6,7 +6,7 @@
 /*   By: seolim <seolim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/13 13:19:59 by seolim            #+#    #+#             */
-/*   Updated: 2021/01/13 13:20:06 by seolim           ###   ########.fr       */
+/*   Updated: 2021/01/13 13:29:18 by seolim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	**double_alloc(int len)
 {
 	char	**alloc;
 	int		i;
-	
+
 	if (!(alloc = malloc(sizeof(char *) * (len + 1))))
 		return (NULL);
 	i = -1;
@@ -39,7 +39,7 @@ char	**double_alloc(int len)
 
 char	***triple_alloc(int len)
 {
-	char ***alloc;
+	char	***alloc;
 
 	alloc = NULL;
 	if (!(alloc = malloc(sizeof(char **) * (len + 1))))
