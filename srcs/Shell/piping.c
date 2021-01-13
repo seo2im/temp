@@ -6,7 +6,7 @@
 /*   By: seolim <seolim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/13 14:04:10 by seolim            #+#    #+#             */
-/*   Updated: 2021/01/13 14:04:14 by seolim           ###   ########.fr       */
+/*   Updated: 2021/01/13 14:06:41 by seolim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	is_piping(char **cmd)
 int	piping(char **cmd)
 {
 	int		i;
-	
+
 	i = -1;
 	if (!is_piping(cmd))
 	{
