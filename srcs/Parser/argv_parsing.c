@@ -6,7 +6,7 @@
 /*   By: seolim <seolim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/13 13:51:51 by seolim            #+#    #+#             */
-/*   Updated: 2021/01/13 14:48:13 by seolim           ###   ########.fr       */
+/*   Updated: 2021/01/13 14:57:30 by seolim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,8 @@ static void	enving(char *arg, char *new, int *idx, int *jdx)
 	i++;
 	key = get_key(arg, &i);
 	env = get_env(g_envp, key);
-	j += ft_strcpy(new + ++j, env) - 1;
+	++j;
+	j += ft_strcpy(new + j, env) - 1;
 	free(key);
 	free(env);
 	*idx = i;

@@ -6,7 +6,7 @@
 /*   By: seolim <seolim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/13 13:49:04 by seolim            #+#    #+#             */
-/*   Updated: 2021/01/13 13:50:46 by seolim           ###   ########.fr       */
+/*   Updated: 2021/01/13 14:55:36 by seolim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,5 @@ int		env(int argc, char *argv[], char *envp[])
 		ft_write_n(1, env[i]);
 	g_last_ret = 0;
 	ft_double_free(env);
+	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: seolim <seolim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/13 13:58:16 by seolim            #+#    #+#             */
-/*   Updated: 2021/01/13 14:45:51 by seolim           ###   ########.fr       */
+/*   Updated: 2021/01/13 14:56:56 by seolim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,8 @@ char		**redirection(char **cmd, int fd[2])
 		if (!strcmp(cmd[i], "<") || !strcmp(cmd[i], ">")
 			|| !strcmp(cmd[i], ">>"))
 		{
-			rediretioning(cmd[++i], cmd[i], fd);
+			++i;
+			rediretioning(cmd[i], cmd[i - 1], fd);
 			if (fd[0] == -1 || fd[1] == -1)
 				return (error(argv, cmd[i]));
 			continue;
