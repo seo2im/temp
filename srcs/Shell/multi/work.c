@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   work.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: seolim <seolim@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/01/13 14:01:33 by seolim            #+#    #+#             */
+/*   Updated: 2021/01/13 14:01:58 by seolim           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "minishell.h"
 
-static int work3(char **argv_p)
+static int	work3(char **argv_p)
 {
 	if (!ft_strcmp(argv_p[0], "echo"))
 		echo(ft_strslen(argv_p), argv_p, g_envp);
@@ -18,7 +30,7 @@ static int work3(char **argv_p)
 		ft_exit();
 }
 
-static int work2(char **argv, int fd[2], int backup[2])
+static int	work2(char **argv, int fd[2], int backup[2])
 {
 	char	**argv_p;
 	int		i;
@@ -36,12 +48,12 @@ static int work2(char **argv, int fd[2], int backup[2])
 	return (TRUE);
 }
 
-int work(char **cmd)
+int			work(char **cmd)
 {
 	char	**argv;
 	int		fd[2];
 	int		backup[2];
-	
+
 	fd[0] = 0;
 	fd[1] = 1;
 	if (!(argv = redirection(cmd, fd)))
