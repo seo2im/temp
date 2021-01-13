@@ -6,17 +6,17 @@
 /*   By: seolim <seolim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/13 14:12:42 by seolim            #+#    #+#             */
-/*   Updated: 2021/01/13 14:13:24 by seolim           ###   ########.fr       */
+/*   Updated: 2021/01/13 14:14:36 by seolim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIB_H
 # define LIB_H
-#include <unistd.h>
-#include <stdlib.h>
-#include <stdio.h>
-#include <fcntl.h>
-#include "macro.h"
+# include <unistd.h>
+# include <stdlib.h>
+# include <stdio.h>
+# include <fcntl.h>
+# include "macro.h"
 
 int		ft_strlen(char *str);
 int		ft_strslen(char *strs[]);
