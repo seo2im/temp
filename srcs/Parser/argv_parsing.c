@@ -6,7 +6,7 @@
 /*   By: seolim <seolim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/13 13:51:51 by seolim            #+#    #+#             */
-/*   Updated: 2021/01/13 14:57:30 by seolim           ###   ########.fr       */
+/*   Updated: 2021/01/13 16:01:29 by seolim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ static void	enving(char *arg, char *new, int *idx, int *jdx)
 {
 	char	*key;
 	char	*env;
+	char	*num;
 	int		i;
 	int		j;
 
@@ -44,7 +45,10 @@ static void	enving(char *arg, char *new, int *idx, int *jdx)
 	j = *jdx;
 	if (arg[i + 1] == '?')
 	{
-		new[++j] = g_last_ret + '0';
+		num = ft_itoa(g_last_ret);
+		++j;
+		j += ft_strcpy(new + j, num);
+		free(num);
 		i++;
 	}
 	i++;

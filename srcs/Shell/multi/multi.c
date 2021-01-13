@@ -6,7 +6,7 @@
 /*   By: seolim <seolim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/13 14:00:59 by seolim            #+#    #+#             */
-/*   Updated: 2021/01/13 14:52:48 by seolim           ###   ########.fr       */
+/*   Updated: 2021/01/13 16:16:53 by seolim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ int			multi(char **input)
 	{
 		if (!strcmp(input[i], "|"))
 		{
-			g_pipe_cmd[++j] = ft_strsndup(input + start, i);
+			g_pipe_cmd[++j] = ft_strsndup(input + start, i - start);
 			start = i + 1;
 		}
 	}
@@ -73,5 +73,6 @@ int			multi(char **input)
 		g_pipe_cmd[++j] = ft_strsndup(input + start, i);
 	g_pipe_cmd[++j] = NULL;
 	pipe_processing(g_pipe_cmd);
+	pipe_cmd_free();
 	return (0);
 }

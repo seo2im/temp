@@ -6,7 +6,7 @@
 /*   By: seolim <seolim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/13 14:13:38 by seolim            #+#    #+#             */
-/*   Updated: 2021/01/13 14:46:57 by seolim           ###   ########.fr       */
+/*   Updated: 2021/01/13 16:17:21 by seolim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include "lib.h"
 # include "parser.h"
 # include "env.h"
+# include "get_next_line.h"
 # include <sys/wait.h>
 # include <sys/stat.h>
 # include <errno.h>
@@ -30,7 +31,7 @@ char		***g_pipe_cmd;
 char		**g_argv;
 char		**g_argv_p;
 
-int			prompt(char *str);
+int			prompt(char **line);
 char		**redirection(char **cmd, int fd[2]);
 int			piping(char **command);
 void		sig_int();
@@ -53,6 +54,7 @@ void		std_reset(int fd[2], int backup[2]);
 char		***pipe_alloc(char **input);
 void		child_exit();
 int			work(char **cmd);
+void		pipe_cmd_free(void);
 
 void		std_reset(int fd[2], int backup[2]);
 void		std_reset(int fd[2], int backup[2]);

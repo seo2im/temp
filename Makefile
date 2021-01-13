@@ -10,7 +10,8 @@ SRC = ./main.c	\
 		./srcs/external/Env/env.c \
 		./srcs/external/Pwd/pwd.c \
 		./srcs/library/Envlib/*.c \
-		./srcs/library/Lib/*.c
+		./srcs/library/Lib/*.c \
+		./srcs/gnl/*.c
 FLAG = -Wall -Werror -Wextra
 
 all : $(TARGET)

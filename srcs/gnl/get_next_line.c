@@ -1,27 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   prompt.c                                           :+:      :+:    :+:   */
+/*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seolim <seolim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/13 14:04:24 by seolim            #+#    #+#             */
-/*   Updated: 2021/01/13 15:40:27 by seolim           ###   ########.fr       */
+/*   Created: 2020/07/01 10:29:13 by seolim            #+#    #+#             */
+/*   Updated: 2021/01/13 15:59:19 by seolim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minishell.h"
+#include "get_next_line.h"
 
-int		prompt(char **line)
+int		get_next_line(int fd, char **line)
 {
-	int len;
-	int flag;
+	char	bufs[256];
+	char	buf;
+	int		len;
+	int		i;
 
-	ft_write(1, "$> ");
-	if ((flag = get_next_line(0, line)) == 0)
+	i = -1;
+	while (TRUE)
 	{
-		ft_write_n(1, "^D");
-		return (1);
+		len = read(fd, &buf, 1);
+		if (len == 0)
+			return (0);
+		if (buf == '\n')
+			break ;
+		bufs[++i] = buf;
 	}
-	return (0);
+	bufs[++i] = 0;
+	*line = ft_strdup(bufs);
+	return (1);
 }

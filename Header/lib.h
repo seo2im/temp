@@ -6,7 +6,7 @@
 /*   By: seolim <seolim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/13 14:12:42 by seolim            #+#    #+#             */
-/*   Updated: 2021/01/13 14:14:36 by seolim           ###   ########.fr       */
+/*   Updated: 2021/01/13 15:59:43 by seolim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ void	ft_single_free(char *data);
 void	ft_double_free(char **data);
 char	*ft_strtrim(char *s1, char *set);
 char	*ft_strchr(const char *s, int c);
+char	*ft_itoa(int n);
 
 char	*single_alloc(int len);
 char	**double_alloc(int len);

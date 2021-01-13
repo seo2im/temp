@@ -6,20 +6,11 @@
 /*   By: seolim <seolim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/13 14:08:14 by seolim            #+#    #+#             */
-/*   Updated: 2021/01/13 14:45:21 by seolim           ###   ########.fr       */
+/*   Updated: 2021/01/13 16:19:13 by seolim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
-
-static void	arr_init(char str[255])
-{
-	int	i;
-
-	i = -1;
-	while (++i < 255)
-		str[i] = 0;
-}
 
 void		global_init(void)
 {
@@ -43,7 +34,7 @@ void		shell(char **input)
 	{
 		if (!strcmp(input[i], ";"))
 		{
-			g_cmd = ft_strsndup(input + start, i);
+			g_cmd = ft_strsndup(input + start, i - start);
 			start = i + 1;
 			piping(g_cmd);
 			ft_double_free(g_cmd);
@@ -59,19 +50,17 @@ void		shell(char **input)
 
 int			main(int argc, char *argv[], char *envp[])
 {
-	char	str[255];
-	int		i;
+	char	*line;
 
-	arr_init(str);
 	sig_int();
 	global_init();
 	g_envp = init_envp(envp);
 	while (TRUE)
 	{
-		prompt(str);
-		if (!pre_parsing(str, &g_input))
+		if (prompt(&line))
 			continue;
-		i = -1;
+		if (!pre_parsing(line, &g_input))
+			continue;
 		shell(g_input);
 		ft_double_free(g_input);
 	}

@@ -6,7 +6,7 @@
 /*   By: seolim <seolim@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/13 13:57:43 by seolim            #+#    #+#             */
-/*   Updated: 2021/01/13 14:00:18 by seolim           ###   ########.fr       */
+/*   Updated: 2021/01/13 16:02:28 by seolim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ int		is_cmd(char *cmd)
 		return (TRUE);
 	else
 	{
-		g_last_ret = 3;
+		g_last_ret = 127;
 		ft_write(2, cmd);
 		ft_write_n(2, " : command not found");
 		return (FALSE);
